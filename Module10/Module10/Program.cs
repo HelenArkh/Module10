@@ -6,10 +6,11 @@ namespace Module10
     {
         static void Main(string[] args)
         {
-            NewMessenger newMessenger = new NewMessenger();
+            IMessenger<Phone> viberInPhone = new Viber<Phone>();
+            viberInPhone.GetDeviceInfo(new Phone());
 
-            ((IWhatsApp)newMessenger).SendMessage("Hello World!");
-            ((IViber)newMessenger).SendMessage("Hello World!");
+            IMessenger<IPhone> viberInIphone = new Viber<IPhone>();
+            viberInIphone.GetDeviceInfo(new IPhone());
         }
     }
 }
