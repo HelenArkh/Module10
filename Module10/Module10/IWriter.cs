@@ -6,11 +6,14 @@ namespace Module10
 {
     public interface IWriter
     {
-        void Write() { Console.WriteLine("Hello, I'm Writer!"); }
+        void Write();
     }
 
     public class Writer : IWriter
     {
-
+        void IWriter.Write()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
